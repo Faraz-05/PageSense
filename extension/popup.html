@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PageSense</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>PageSense</h1>
+
+        <p class="subtitle">
+            AI-powered webpage assistant
+        </p>
+
+        <label for="model">
+            Select Model
+        </label>
+
+        <select id="model">
+            <option>Loading models...</option>
+        </select>
+
+        <label for="question">
+            Ask a Question
+        </label>
+
+        <textarea
+            id="question"
+            rows="5"
+            placeholder="Ask anything about this webpage..."></textarea>
+
+        <div class="button-group">
+
+            <button id="askBtn">
+                Ask AI
+            </button>
+
+            <button id="compareBtn">
+                Compare Models
+            </button>
+
+        </div>
+
+        <div class="response-section">
+
+            <h2>Response</h2>
+
+            <div id="loading" hidden>
+                Thinking...
+            </div>
+
+            <div id="response">
+                Ask a question about the current webpage to get started.
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
