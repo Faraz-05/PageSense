@@ -1,3 +1,7 @@
+from utils import clean_text
+from rag import split_into_chunks
+from rag import retrieve_context
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -29,33 +33,29 @@ def models():
 
             {
 
-                "id":"openai/gpt-4o",
-
-                "name":"GPT-4o"
-
-            },
-
-            {
-
-                "id":"openai/gpt-4o-mini",
-
-                "name":"GPT-4o Mini"
+                "id": "gemini-2.5-flash",
+                "name": "Gemini 2.5 Flash"
 
             },
 
             {
 
-                "id":"anthropic/claude-sonnet-4.5",
-
-                "name":"Claude Sonnet 4.5"
+                "id": "llama-3.3-70b",
+                "name": "Llama 3.3 70B"
 
             },
 
             {
 
-                "id":"google/gemini-2.5-flash",
+                "id": "deepseek-r1",
+                "name": "DeepSeek R1"
 
-                "name":"Gemini 2.5 Flash"
+            },
+
+            {
+
+                "id": "qwen3",
+                "name": "Qwen 3"
 
             }
 
@@ -67,19 +67,31 @@ def models():
 @app.post("/chat")
 def chat(request: ChatRequest):
 
-    preview = request.page_text[:500]
+    cleaned_text = clean_text(request.page_text)
+
+    retrieved_chunks = retrieve_context(
+        cleaned_text,
+        request.question
+    )
+
+    answer = ""
+
+    for i, item in enumerate(retrieved_chunks, start=1):
+
+        answer += f"Chunk {i}\n"
+
+        answer += f"Distance: {item['distance']:.4f}\n\n"
+
+        answer += item["chunk"]
+
+        answer += "\n\n"
+
+        answer += "-" * 50
+
+        answer += "\n\n"
 
     return {
 
-        "answer": f"""Question:
-{request.question}
-
-Model:
-{request.model}
-
-Page Preview:
-
-{preview}
-"""
+        "answer": answer
 
     }

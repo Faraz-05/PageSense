@@ -1,20 +1,19 @@
 {
   "manifest_version": 3,
-
   "name": "PageSense",
-
   "version": "1.0.0",
-
   "description": "AI-powered Chrome extension to chat with any webpage using RAG.",
 
   "permissions": [
     "activeTab",
     "tabs",
-    "scripting" 
+    "scripting"
   ],
 
   "host_permissions": [
-    "http://127.0.0.1:8000/*"
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*",
+    "<all_urls>"
   ],
 
   "action": {
@@ -32,7 +31,8 @@
       ],
       "js": [
         "content.js"
-      ]
+      ],
+      "run_at": "document_idle"
     }
   ]
 }
