@@ -100,21 +100,15 @@ Context-Aware Answer
 
 ## Chrome Extension
 
-```
 ![Chrome Extension](visuals/chrome_extension.png)
-```
 
 ## Model Selection
 
-```
 ![Model Selection](visuals/model_selection.png)
-```
 
 ## AI Response
 
-```
 ![AI Response](visuals/ai_response.png)
-```
 
 ---
 
