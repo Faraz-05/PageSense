@@ -101,25 +101,19 @@ Context-Aware Answer
 ## Chrome Extension
 
 ```
-(Add Screenshot)
+![Chrome Extension](visuals/chrome_extension.png)
 ```
 
 ## Model Selection
 
 ```
-(Add Screenshot)
+![Model Selection](visuals/model_selection.png)
 ```
 
 ## AI Response
 
 ```
-(Add Screenshot)
-```
-
-## Multi-Model Comparison
-
-```
-(Add Screenshot)
+![AI Response](visuals/ai_response.png)
 ```
 
 ---
@@ -432,11 +426,9 @@ PageSense/
 │   └── content.js
 │
 ├── visuals/
-│   ├── homepage.png
-│   ├── asking_question.png
-│   ├── response.png
-│   ├── compare_models.png
-│   └── architecture.png
+│   ├── chrome_extension.png
+│   ├── model_selection.png
+│   ├── ai_response.png
 │
 ├── README.md
 ├── requirements.txt
