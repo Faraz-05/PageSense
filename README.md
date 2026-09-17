@@ -88,7 +88,7 @@ Prompt Construction
    │
    ▼
 Selected LLM
-(Gemini / GPT-OSS / Llama / Qwen)
+(Gemini / Groq compound / Llama / Qwen)
    │
    ▼
 Context-Aware Answer
@@ -164,9 +164,9 @@ PageSense supports multiple Large Language Models, enabling users to select the 
 Current supported models:
 
 - Google Gemini
-- Meta Llama 3.3 70B
+- Groq compound
 - OpenAI GPT-OSS 120B
-- Qwen 3.6 27B
+- Qwen 3.8 27B
 
 Future versions will allow users to compare responses from multiple models simultaneously.
 
@@ -288,8 +288,8 @@ Solution:
 - Google Gemini API
 - Groq API
 - GPT-OSS
-- Llama 3.3
-- Qwen
+- Groq compound
+- Qwen 3.8
 
 ## Retrieval
 
@@ -464,8 +464,8 @@ Example Response
             "name":"Gemini 2.5 Flash"
         },
         {
-            "id":"llama",
-            "name":"Llama 3.3 70B"
+            "id":"Groq",
+            "name":"Groq compound"
         },
         {
             "id":"gptoss",
@@ -473,7 +473,7 @@ Example Response
         },
         {
             "id":"qwen",
-            "name":"Qwen 3.6 27B"
+            "name":"Qwen 3.8 27B"
         }
     ]
 }
