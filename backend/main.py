@@ -85,7 +85,7 @@ AVAILABLE_MODELS = [
 
     {
         "id": "llama",
-        "name": "Llama 3.3 70B"
+        "name": "Llama 3.1 8B"
     },
 
     {
@@ -95,7 +95,7 @@ AVAILABLE_MODELS = [
 
     {
         "id": "qwen",
-        "name": "Qwen 3.6 27B"
+        "name": "Qwen 3 32B"
     }
 
 ]
@@ -386,7 +386,7 @@ def generate_answer(
     elif model == "llama":
 
         return ask_groq(
-            "llama-3.3-70b-versatile",
+            "llama-3.1-8b-instant",
             question,
             context
         )
@@ -402,7 +402,7 @@ def generate_answer(
     elif model == "qwen":
 
         return ask_groq(
-            "qwen/qwen3.6-27b",
+            "qwen/qwen3-32b",
             question,
             context
         )
