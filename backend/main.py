@@ -85,7 +85,7 @@ AVAILABLE_MODELS = [
 
     {
         "id": "llama",
-        "name": "llama-3.1-8b-instant"
+        "name": "llama-3.3-70b-versatile"
     },
 
     {
@@ -386,7 +386,7 @@ def generate_answer(
     elif model == "llama":
 
         return ask_groq(
-            "llama-3.1-8b-instant",
+            "llama-3.3-70b-versatile",
             question,
             context
         )
