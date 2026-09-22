@@ -84,12 +84,12 @@ AVAILABLE_MODELS = [
     },
 
     {
-        "id": "llama",
-        "name": "meta-llama/llama-prompt-guard-2-22m"
+        "id": "gptoss-20b",
+        "name": "GPT OSS 20B"
     },
 
     {
-        "id": "gptoss",
+        "id": "gptoss-120b",
         "name": "GPT OSS 120B"
     },
 
@@ -383,15 +383,15 @@ def generate_answer(
             context
         )
 
-    elif model == "llama":
+    elif model == "gptoss-20b":
 
         return ask_groq(
-            "meta-llama/llama-prompt-guard-2-22m",
+            "openai/gpt-oss-20b",
             question,
             context
         )
 
-    elif model == "gptoss":
+    elif model == "gptoss-120b":
 
         return ask_groq(
             "openai/gpt-oss-120b",
