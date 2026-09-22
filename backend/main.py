@@ -84,8 +84,8 @@ AVAILABLE_MODELS = [
     },
 
     {
-        "id": "groq",
-        "name": "groq compound"
+        "id": "llama",
+        "name": "llama-3.1-8b-instant"
     },
 
     {
@@ -383,10 +383,10 @@ def generate_answer(
             context
         )
 
-    elif model == "groq":
+    elif model == "llama":
 
         return ask_groq(
-            "groq/compound",
+            "llama-3.1-8b-instant",
             question,
             context
         )
